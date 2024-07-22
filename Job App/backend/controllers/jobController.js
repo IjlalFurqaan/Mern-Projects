@@ -14,7 +14,7 @@ export const postJob = catchAsyncErrors(async (req, res, next) => {
   const { role } = req.user;
   if (role === "Job Seeker") {
     return next(
-      new ErrorHandler("Job Seeker not allowed to access this resource", 400)
+      new ErrorHandler("Job Seeker not allowed to access this resource.", 400)
     );
   }
   const {
